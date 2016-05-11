@@ -1,0 +1,62 @@
+#background{
+    height: 40%
+    width:100%;
+    z-index:-1;
+}
+.kuan{
+
+    width:680px;
+    height:30px;
+  background: rgba(137, 120, 113, 0.89);
+   /* background-image: url(../image/444.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    */
+    border: 1px solid #000000;
+    position: absolute;
+    transition: background .2s;
+    -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
+    left: 50%;
+    margin-left: -340px;
+    top: 30%;
+    filter:alpha(opacity=75);
+    -moz-opacity:0.75;
+    opacity:0.75;
+
+}
+.kuan input{
+    width: 630px;;
+    height:30px;
+    background: none;
+    border:none;
+    outline:medium;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.kuan:hover{
+    -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
+    border-color: rgba(245, 245, 181, 0.75);
+    -webkit-box-shadow:0 0 18px rgb(226, 190, 127);
+}
+.kuan input:focus{
+    background: #6d5043;
+    transition: background .2s;
+}
+.press{
+
+    position: absolute;
+    left: 645px;
+    width: 35px;
+    height: 100%;
+    background-image: url(../image/444.png) ;
+    cursor: pointer
+}
+#text{
+    position:fixed;
+    top: 310px;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+    left: 40%;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+ <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <script type="text/javascript" src="js/jquery.wookmark.js"></script>
+    <style>
+        *{
+            font-family: Microsoft YaHei;
+            margin: 0;
+            padding: 0;
+        }
+        a:link {text-decoration: none;color: black}
+        a:visited{text-decoration: none;color: #8b4234
+        }
+        a:hover{text-decoration: underline;color: #d9eaff
+        }
+    </style>
+
+
+
+
+    <title></title>
+</head>
+<body>
+<div id="background">
+    <form action="" method="get">
+    <div class="kuan">
+        <div class="press" id="search"></div>
+        <input style="color: #fff8eb" value="今日热点：贝壳巧克力"  onfocus="value ='' " onblur="if (value ==''){value='今日热点：贝壳巧克力'}" type="text" />
+    </div>
+    </form>
+    <img src="image/333.jpg" width=100% />
+</div>
+<div id="up">
+
+    <div id="drr">
+        <a class="drrr" id="find" href="#">发现</a>
+        <a class="drrr" id="new" href="#">最新</a>
+        <a class="drrr" id="..." href="#" style="line-height: 10px">...</a>
+    </div>
+    <div id="drr4">
+        <div class="btn" id="signin">注册</div>
+        <div class="btn" id="login">登录</div>
+    </div>
+
+    <img src="image/111.png" style="height: 100% ;width: 85px; margin: 0 0 0 200px"   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="./image/111.png"); />
+</div>
+<div class="fenge" id="fenge1">
+    <hr class="hr1" id="hr11" />
+    <hr class="hr2"  id="hr21"/>
+    <div class="text" id="text1">趣味分类</div>
+    </div>
+<div id="bigbox">
+    <div class="box" id="box1"><img src="image/qcl.png" \></div>
+    <div class="box" id="box2"><img src="image/mls.png" \></div>
+    <div class="box" id="box3"><img src="image/jwj.png" \></div>
+    <div class="box" id="box4"><img src="image/nlk.png" \></div>
+    <div class="box" id="box5"><img src="image/dg.png" \></div>
+    <div class="box" id="box6"><img src="image/ttq.png" \></div>
+    <div class="box" id="box7"><img src="image/pm.png" \></div>
+</div>
+<div class="fenge" id="fenge2">
+    <hr id="hr12" />
+    <hr id="hr22" />
+    <div id="text2">您的小伙伴们在干吗?</div>
+
+</div>
+
+<div id="down">
+    <ul id="tiles" style="list-style: none;position: relative;" >
+    </ul>
+<script>
+    (function ($){
+
+        for(i=0;i<20;i++){
+            var index = Math.round(Math.random() * 10);
+            var img="image/"+index+".jpg";
+            //随机获取一个标签
+
+            $('#tiles').append(" <li><img src='"+img+"' width='200'/><span></br>"+i+"</span></li> ");
+        }
+        var handler = $('#tiles li');
+
+
+        handler.wookmark({
+            // Prepare layout options.
+            autoResize: true, // This will auto-update the layout when the browser window is resized.
+            container: $('#down'), // Optional, used for some extra CSS styling
+            offset: 10, // Optional, the distance between grid items
+            outerOffset: 10, // Optional, the distance to the containers border
+            itemWidth:230 // Optional, the width of a grid item
+        });
+
+        // Capture clicks on grid items.
+        handler.click(function(){
+            // Randomize the height of the clicked item.
+            var newHeight = $('img', this).height() + 30;
+            $(this).css('height', newHeight+'px');
+
+            // Update the layout.
+            handler.wookmark();
+        });
+    })(jQuery);
+
+</script>
+
+    </div>
+
+</body>
+</html>
